@@ -2,28 +2,16 @@ package com.example.appfacturingv14;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 
@@ -36,7 +24,7 @@ public class interfaz_clientes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interfaz_clientes);
-        ID = (EditText) findViewById(R.id.txtNombre);
+        ID = (EditText) findViewById(R.id.txtID);
         Cedula = (EditText) findViewById(R.id.txtCedula);
         Telefono = (EditText) findViewById(R.id.txtTelefono);
         Nombre = (EditText) findViewById(R.id.txtNombre);
@@ -44,86 +32,59 @@ public class interfaz_clientes extends AppCompatActivity {
         Direccion = (EditText) findViewById(R.id.txtDireccion);
         Email = (EditText) findViewById(R.id.txtEmail);
         Creacion = (EditText) findViewById(R.id.txtCreacion);
-        //comentario
 
+        //comentario22
+    }
+  public void guardar (View view){
+      AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+              "administracion", null, 1);
+      SQLiteDatabase bd = admin.getWritableDatabase();
+      String id = ID.getText().toString();
+      String Ced = Cedula.getText().toString();
+      String Tel = Telefono.getText().toString();
+      String Nomb = Nombre.getText().toString();
+      String Ape = Apellido.getText().toString();
+      String Dir = Direccion.getText().toString();
+      String email = Email.getText().toString();
+      String creacion = Creacion.getText().toString();
+      ContentValues registro = new ContentValues();
+      registro.put("id", id);
+      registro.put("cedula", Ced);
+      registro.put("telefono", Tel);
+      registro.put("nombre ", Nomb);
+      registro.put("apellido", Ape);
+      registro.put("direccion", Dir);
+      registro.put("email", email);
+      registro.put("creacion", creacion);
+      bd.insert("clientes", null, registro);
+      bd.close();
+      ID.setText("");
+      Cedula.setText("");
+      Telefono.setText("");
+     Nombre.setText("");
+      Apellido.setText("");
+      Direccion.setText("");
+      Email.setText("");
+      Creacion.setText("");
+      Toast.makeText(this, "Se cargaron los datos del artículo",
+              Toast.LENGTH_SHORT).show();
 
-    }
-    public void btnAgregar(View view){
-        ejecutarServico("http://192.168.1.4/dbfacturing1/insertarclientes.php");
-    }
+  }
+  public  void consultarporcodigo(View view){
+      AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+              "administracion", null, 1);
+      SQLiteDatabase bd = admin.getWritableDatabase();
+      String id = ID.getText().toString();
+      Cursor fila = bd.rawQuery(
+              "select cedula,telefono,nombre ,apellido from articulos where codigo=" + id, null);
+      if (fila.moveToFirst()) {
+          et2.setText(fila.getString(0));
+          et3.setText(fila.getString(1));
+      } else
+          Toast.makeText(this, "No existe un artículo con dicho código",
+                  Toast.LENGTH_SHORT).show();
+      bd.close();
 
-    private void ejecutarServico(String URL){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(), "Operacion exitosa", Toast.LENGTH_SHORT).show();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(),error.toString(), Toast.LENGTH_SHORT).show();
-            }
+  }
 
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> parametros=new HashMap<String,String>();
-                parametros.put("CLIAPELLIDOS",Apellido.getText().toString()+"");
-                parametros.put("CLINOMBRES",Nombre.getText().toString()+"");
-                parametros.put("CLICEDULA",Cedula.getText().toString()+"");
-                parametros.put("CLICORREO",Email.getText().toString()+"");
-                parametros.put("CLITELEFONO",Telefono.getText().toString()+"");
-                parametros.put("CLIDIRECCION",Direccion.getText().toString()+"");
-                parametros.put("Fecha",Creacion.getText().toString());
-                return parametros;
-            }
-        };
-        requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-    }
-    private void buscar(String URL){
-        JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                JSONObject jsonObject = null;
-                for (int i = 0; i < response.length(); i++) {
-                    try {
-                        jsonObject = response.getJSONObject(i);
-                        Apellido.setText(jsonObject.getString("CLIAPELLIDOS"));
-                        Nombre.setText(jsonObject.getString("CLINOMBRES"));
-                        Cedula.setText(jsonObject.getString("CLICEDULA"));
-                        Email.setText(jsonObject.getString("CLICORREO"));
-                        Telefono.setText(jsonObject.getString("CLITELEFONO"));
-                        Direccion.setText(jsonObject.getString("CLIDIRECCION"));
-                        Creacion.setText(jsonObject.getString("Fecha"));
-                    } catch (JSONException e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(),"Error de conexion",Toast.LENGTH_SHORT).show();
-            }
-        }
-        );
-        requestQueue=Volley.newRequestQueue(this);
-        requestQueue.add(jsonArrayRequest);
-    }
-
-    public void buscar(View view){
-        buscar("http://192.168.1.4/dbfacturing1/buscarclientes.php?CLICEDULA="+Cedula.getText());
-    }
-
-    public void limpiar(View view) {
-        ID.setText("");
-        Cedula.setText("");
-        Telefono.setText("");
-        Nombre.setText("");
-        Apellido.setText("");
-        Direccion.setText("");
-        Email.setText("");
-        Creacion.setText("");
-    }
 }

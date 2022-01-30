@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <ImageButton
-            android:id="@+id/imageButton27"
+            android:id="@+id/btnbuscar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -103,7 +103,7 @@
             app:srcCompat="@drawable/ic_buscar" />
 
         <ImageButton
-            android:id="@+id/imageButton17"
+            android:id="@+id/btnbguardar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -111,7 +111,7 @@
             app:srcCompat="@drawable/ic_guardar" />
 
         <ImageButton
-            android:id="@+id/imageButton15"
+            android:id="@+id/btnagregar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -119,7 +119,7 @@
             app:srcCompat="@drawable/ic_aniadir" />
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/btnactualizar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -127,7 +127,7 @@
             app:srcCompat="@drawable/ic_actualizar" />
 
         <ImageButton
-            android:id="@+id/imageButton16"
+            android:id="@+id/btneliminar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -135,7 +135,7 @@
             app:srcCompat="@drawable/ic_eliminar" />
 
         <ImageButton
-            android:id="@+id/imageButton18"
+            android:id="@+id/btnlimpiar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -144,7 +144,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/txtidinventario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/txtprecio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -179,10 +179,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/txtstock" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/txtfechaexpiracion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -192,16 +192,16 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:hint="Fecha de expiracion"
+        android:hint="AAAA/MM/DD"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtfechaelaboracion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/txtstock"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -217,10 +217,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtfechaexpiracion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/txtfechaelaboracion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -230,16 +230,16 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:hint="Fecha de elaboracion"
+        android:hint="AAAA/MM/DD"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintTop_toBottomOf="@+id/txtfechacompra" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/txtfechacompra"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -249,16 +249,16 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:hint="Fecha de compra"
+        android:hint="AAAA/MM/DD"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+        app:layout_constraintTop_toBottomOf="@+id/txtproveedor" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/txtproveedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -274,10 +274,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName32" />
+        app:layout_constraintTop_toBottomOf="@+id/txtproducto" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName32"
+        android:id="@+id/txtproducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -293,6 +293,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtidinventario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
