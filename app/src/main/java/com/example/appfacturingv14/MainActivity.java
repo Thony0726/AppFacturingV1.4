@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                     etClave.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 } else { // ocultar contrasenia
                     etClave.setTransformationMethod(HideReturnsTransformationMethod.getInstance()); } } });
+
+
             }
 //Comentario
 
