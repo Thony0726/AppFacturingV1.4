@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nav1"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Home"
+        android:iconTint="@color/link"
+        />
+    <item android:id="@+id/nav2"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Parametros"
+        android:iconTint="@color/link"
+        />
+    <item android:id="@+id/nav3"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Facturaacion"
+        android:iconTint="@color/link"
+        />
+    <item android:id="@+id/nav4"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Reportes"
+        android:iconTint="@color/link"
+        />
+    <item android:id="@+id/nav5"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Ayuda"
+        android:iconTint="@color/link"
+        />
+
+</menu>

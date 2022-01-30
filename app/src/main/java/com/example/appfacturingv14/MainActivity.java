@@ -26,19 +26,23 @@ public class MainActivity extends AppCompatActivity {
         etClave = (EditText) findViewById(R.id.etClave);
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // depende del estado que se encuentre el checlox para que funcione el metodo checked.
                 if (!isChecked) {  //mostrar contrasenia
                     etClave.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 } else { // ocultar contrasenia
-                    etClave.setTransformationMethod(HideReturnsTransformationMethod.getInstance()); } } });
+                    etClave.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
 
 
             }
+        });
+    }
 //Comentario
 
-    public void validarUsuario(View view){
-        Intent i = new Intent(this, interfaz_clientes.class);
+    public void validarUsuario(View view) {
+        Intent i = new Intent(this, interfaz_empleados.class);
         startActivity(i);
     }
 }

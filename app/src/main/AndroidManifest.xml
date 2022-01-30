@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/round_bg"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFacturingV14">
+
         <activity
             android:name=".interfaz_productos"
             android:exported="false" />
