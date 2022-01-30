@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <ImageButton
-            android:id="@+id/imageButton28"
+            android:id="@+id/btnbuscar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -101,7 +101,7 @@
             app:srcCompat="@drawable/ic_buscar" />
 
         <ImageButton
-            android:id="@+id/imageButton23"
+            android:id="@+id/btnguardar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -109,7 +109,7 @@
             app:srcCompat="@drawable/ic_guardar" />
 
         <ImageButton
-            android:id="@+id/imageButton21"
+            android:id="@+id/btnagregar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,7 +117,7 @@
             app:srcCompat="@drawable/ic_aniadir" />
 
         <ImageButton
-            android:id="@+id/imageButton20"
+            android:id="@+id/btnactualizar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,7 +125,7 @@
             app:srcCompat="@drawable/ic_actualizar" />
 
         <ImageButton
-            android:id="@+id/imageButton22"
+            android:id="@+id/btneliminar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -133,7 +133,7 @@
             app:srcCompat="@drawable/ic_eliminar" />
 
         <ImageButton
-            android:id="@+id/imageButton24"
+            android:id="@+id/btnlimpiar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -143,7 +143,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName24"
+        android:id="@+id/txtidproductos"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName25"
+        android:id="@+id/txtnombreproducto"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -180,10 +180,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName24" />
+        app:layout_constraintTop_toBottomOf="@+id/txtidproductos" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName26"
+        android:id="@+id/txtfecha"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -194,16 +194,16 @@
         android:layout_weight="1"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:hint="Ingrese fecha"
+        android:hint="AAAA/MM/DD"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName27" />
+        app:layout_constraintTop_toBottomOf="@+id/txtobservacion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName27"
+        android:id="@+id/txtobservacion"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -218,14 +218,14 @@
         android:hint="Ingrese observacion"
         android:inputType="textPersonName"
         android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName26"
+        app:layout_constraintBottom_toTopOf="@+id/txtfecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName28" />
+        app:layout_constraintTop_toBottomOf="@+id/txtinformacion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName28"
+        android:id="@+id/txtinformacion"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -242,10 +242,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName29" />
+        app:layout_constraintTop_toBottomOf="@+id/txtunidadmedida" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName29"
+        android:id="@+id/txtunidadmedida"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -262,10 +262,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName30" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcodigoproducto" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName30"
+        android:id="@+id/txtcodigoproducto"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -282,6 +282,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName25" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnombreproducto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

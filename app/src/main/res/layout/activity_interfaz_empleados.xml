@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txttelefono"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".interfaz_empleados">
@@ -93,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btnagregar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -101,7 +102,7 @@
             app:srcCompat="@drawable/ic_aniadir" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/btnguardar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -109,7 +110,7 @@
             app:srcCompat="@drawable/ic_guardar" />
 
         <ImageButton
-            android:id="@+id/imageButton26"
+            android:id="@+id/btnbuscar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,7 +118,7 @@
             app:srcCompat="@drawable/ic_buscar" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btnactualizar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,7 +126,7 @@
             app:srcCompat="@drawable/ic_actualizar" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/btneliminar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -133,7 +134,7 @@
             app:srcCompat="@drawable/ic_eliminar" />
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/btnlimpiar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -143,7 +144,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName17"
+        android:id="@+id/txtidempleado"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -162,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName18"
+        android:id="@+id/txtcedula"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -178,10 +179,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+        app:layout_constraintTop_toBottomOf="@+id/txtidempleado" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName19"
+        android:id="@+id/txtelefono"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -197,10 +198,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcedula" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName20"
+        android:id="@+id/txtemail"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -216,10 +217,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+        app:layout_constraintTop_toBottomOf="@+id/txtdireccion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName21"
+        android:id="@+id/txtdireccion"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -235,10 +236,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+        app:layout_constraintTop_toBottomOf="@+id/txtapellido" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName22"
+        android:id="@+id/txtapellido"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -254,10 +255,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName23" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnombre" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName23"
+        android:id="@+id/txtnombre"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -273,10 +274,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcargo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName31"
+        android:id="@+id/txtcargo"
         android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginStart="32dp"
@@ -292,6 +293,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName19" />
+        app:layout_constraintTop_toBottomOf="@+id/txtelefono" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

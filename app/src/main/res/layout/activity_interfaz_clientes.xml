@@ -210,7 +210,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/white"
-            android:onClick="btnAgregar"
             app:srcCompat="@drawable/ic_guardar" />
 
         <ImageButton
@@ -252,7 +251,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/white"
-            android:onClick="buscar"
             app:srcCompat="@drawable/ic_buscar" />
     </LinearLayout>
 
