@@ -248,7 +248,7 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:hint="Ingrese sus Apellidos"
+        android:hint=" Apellidos"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
