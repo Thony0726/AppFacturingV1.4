@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".interfaz_inventario">
 
+
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="409dp"
