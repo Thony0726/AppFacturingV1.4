@@ -43,6 +43,14 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <ImageButton
+            android:id="@+id/imageButton28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@drawable/ic_buscar" />
+
+        <ImageButton
             android:id="@+id/imageButton23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
