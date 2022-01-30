@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 //Comentario
 
     public void validarUsuario(View view){
-        Intent i = new Intent(this, interfaz_productos.class);
+        Intent i = new Intent(this, interfaz_inventario.class);
         startActivity(i);
     }
 }
