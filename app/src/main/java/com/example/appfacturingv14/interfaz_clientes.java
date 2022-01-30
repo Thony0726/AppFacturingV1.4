@@ -11,14 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
+
 
 
 
 public class interfaz_clientes extends AppCompatActivity {
     private Button btnguardar, btnagregar, btnactualizar, btneliminar, btnlimpiar, btnbuscar;
     private EditText ID, Cedula, Telefono, Nombre, Apellido, Direccion, Email, Creacion;
-    RequestQueue requestQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,16 +70,21 @@ public class interfaz_clientes extends AppCompatActivity {
               Toast.LENGTH_SHORT).show();
 
   }
-  public  void consultarporcodigo(View view){
+  public  void consultarporID(View view){
       AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
               "administracion", null, 1);
       SQLiteDatabase bd = admin.getWritableDatabase();
-      String id = ID.getText().toString();
+      String cedula = Cedula.getText().toString();
       Cursor fila = bd.rawQuery(
-              "select cedula,telefono,nombre ,apellido from articulos where codigo=" + id, null);
+              "select id,telefono,nombre ,apellido,direccion,email,creacion from clientes where cedula=" +Cedula.getText().toString() , null);
       if (fila.moveToFirst()) {
-          et2.setText(fila.getString(0));
-          et3.setText(fila.getString(1));
+          ID.setText(fila.getString(0));
+          Telefono.setText(fila.getString(2));
+          Nombre.setText(fila.getString(3));
+          Apellido.setText(fila.getString(4));
+          Direccion.setText(fila.getString(5));
+          Email.setText(fila.getString(6));
+          Creacion.setText(fila.getString(7));
       } else
           Toast.makeText(this, "No existe un artículo con dicho código",
                   Toast.LENGTH_SHORT).show();
