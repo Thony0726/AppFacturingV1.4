@@ -24,7 +24,9 @@ public class interfaz_clientes extends AppCompatActivity {
         Direccion = (EditText) findViewById(R.id.txtDireccion);
         Email = (EditText) findViewById(R.id.txtEmail);
         Creacion = (EditText) findViewById(R.id.txtCreacion);
-        //comentario
+
+        //comentario22
+
 
 
 
