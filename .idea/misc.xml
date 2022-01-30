@@ -10,13 +10,11 @@
         <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/drawable/round_bg.xml" value="0.182" />
         <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/drawable/round_border.xml" value="0.182" />
         <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/drawable/wave.xml" value="0.182" />
+        <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/layout/activity_interfaz_clientes.xml" value="0.25" />
+        <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/layout/activity_interfaz_empleados.xml" value="0.13949275362318841" />
+        <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/layout/activity_interfaz_inventario.xml" value="0.13949275362318841" />
+        <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/layout/activity_interfaz_productos.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/Anthony/AndroidStudioProjects/AppFacturingV14/app/src/main/res/layout/activity_main.xml" value="0.21" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/drawable/ic_user.xml" value="0.183" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/layout/activity_interfaz_clientes.xml" value="0.21" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/layout/activity_interfaz_empleados.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/layout/activity_interfaz_inventario.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/layout/activity_interfaz_productos.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/AppFacturingV1.4/app/src/main/res/layout/activity_main.xml" value="0.14221014492753623" />
       </map>
     </option>
   </component>
