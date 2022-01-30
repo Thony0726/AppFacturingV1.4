@@ -46,13 +46,10 @@ public class interfaz_clientes extends AppCompatActivity {
         Creacion = (EditText) findViewById(R.id.txtCreacion);
         //comentario
 
-        btnagregar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ejecutarServico("http://192.168.1.4/facturing_db/insertarclientes.php");
-            }
-        });
 
+    }
+    public void btnAgregar(View view){
+        ejecutarServico("http://192.168.1.4/dbfacturing1/insertarclientes.php");
     }
 
     private void ejecutarServico(String URL){
@@ -71,20 +68,53 @@ public class interfaz_clientes extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> parametros=new HashMap<String,String>();
-                parametros.put("cliapellidos",Apellido.getText().toString());
-                parametros.put("clinombres",Nombre.getText().toString());
-                parametros.put("clicedula",Cedula.getText().toString());
-                parametros.put("clicorreo",Email.getText().toString());
-                parametros.put("clitelefono",Telefono.getText().toString());
-                parametros.put("clidireccion",Direccion.getText().toString());
-                parametros.put("clicreacion",Creacion.getText().toString());
+                parametros.put("CLIAPELLIDOS",Apellido.getText().toString()+"");
+                parametros.put("CLINOMBRES",Nombre.getText().toString()+"");
+                parametros.put("CLICEDULA",Cedula.getText().toString()+"");
+                parametros.put("CLICORREO",Email.getText().toString()+"");
+                parametros.put("CLITELEFONO",Telefono.getText().toString()+"");
+                parametros.put("CLIDIRECCION",Direccion.getText().toString()+"");
+                parametros.put("Fecha",Creacion.getText().toString());
                 return parametros;
             }
         };
         requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+    private void buscar(String URL){
+        JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        jsonObject = response.getJSONObject(i);
+                        Apellido.setText(jsonObject.getString("CLIAPELLIDOS"));
+                        Nombre.setText(jsonObject.getString("CLINOMBRES"));
+                        Cedula.setText(jsonObject.getString("CLICEDULA"));
+                        Email.setText(jsonObject.getString("CLICORREO"));
+                        Telefono.setText(jsonObject.getString("CLITELEFONO"));
+                        Direccion.setText(jsonObject.getString("CLIDIRECCION"));
+                        Creacion.setText(jsonObject.getString("Fecha"));
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),"Error de conexion",Toast.LENGTH_SHORT).show();
+            }
+        }
+        );
+        requestQueue=Volley.newRequestQueue(this);
+        requestQueue.add(jsonArrayRequest);
+    }
 
+    public void buscar(View view){
+        buscar("http://192.168.1.4/dbfacturing1/buscarclientes.php?CLICEDULA="+Cedula.getText());
+    }
 
     public void limpiar(View view) {
         ID.setText("");
