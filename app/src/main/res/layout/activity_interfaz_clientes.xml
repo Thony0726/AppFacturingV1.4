@@ -128,23 +128,5 @@
             android:hint="Ingrese sus Apellidos"
             android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:background="@drawable/round_border"
-            android:gravity="center"
-            android:hint="Ingrese su Direccion"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:background="@drawable/round_border"
-            android:gravity="center"
-            android:hint="Ingrese esu E-mail"
-            android:textColor="@color/black" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
