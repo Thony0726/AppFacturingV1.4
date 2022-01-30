@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // checkbox status is changed from uncheck to checked.
-                if (!isChecked) {  //show password
+                // depende del estado que se encuentre el checlox para que funcione el metodo checked.
+                if (!isChecked) {  //mostrar contrasenia
                     etClave.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } else { // hide password
+                } else { // ocultar contrasenia
                     etClave.setTransformationMethod(HideReturnsTransformationMethod.getInstance()); } } });
             }
 //Comentario
 
     public void validarUsuario(View view){
-        Intent i = new Intent(this, interfaz_inventario.class);
+        Intent i = new Intent(this, interfaz_clientes.class);
         startActivity(i);
     }
 }
