@@ -221,7 +221,7 @@
             app:srcCompat="@drawable/ic_aniadir" />
 
         <ImageButton
-            android:id="@+id/btnactualizarr"
+            android:id="@+id/btnactualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -242,6 +242,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/white"
+            android:onClick="limpiar"
             app:srcCompat="@drawable/ic_limpiar" />
 
         <ImageButton
