@@ -63,14 +63,14 @@
         android:layout_height="92dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:background="@drawable/round_bg"
         android:text="CLIENTES"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button18" />
 
@@ -89,6 +89,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#2196F3"
+            android:onClick="home"
             app:srcCompat="@drawable/ic_baseline_home_24" />
 
         <ImageButton
@@ -97,6 +98,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#2196F3"
+            android:onClick="parametros"
             app:srcCompat="@drawable/ic_baseline_apps_24" />
 
         <ImageButton

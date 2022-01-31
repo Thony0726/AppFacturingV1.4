@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //Comentario
 
     public void validarUsuario(View view) {
-        Intent i = new Intent(this, interfaz_clientes.class);
+        Intent i = new Intent(this, interfaz_home.class);
         startActivity(i);
     }
 }
