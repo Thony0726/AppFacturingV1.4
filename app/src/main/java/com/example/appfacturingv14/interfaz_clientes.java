@@ -3,6 +3,7 @@ package com.example.appfacturingv14;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -91,5 +92,15 @@ public class interfaz_clientes extends AppCompatActivity {
       bd.close();
 
   }
+
+    public void parametros(View view) {
+        Intent i = new Intent(this, parametros.class);
+        startActivity(i);
+    }
+
+    public void home(View view) {
+        Intent i = new Intent(this, interfaz_home.class);
+        startActivity(i);
+    }
 
 }
